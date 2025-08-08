@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play – Minecraft Unblocked</title>
+    <meta name="description" content="Play Minecraft in a fullscreen, responsive frame. Choose between EaglercraftX 1.8.8, Eaglercraft 1.5.2, and Classic Minecraft." />
+    <link rel="canonical" href="https://minecraft-unblocked6x.github.io/game.html" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="icon" type="image/webp" href="./minecraft-1-5-2.webp" />
+    <link rel="apple-touch-icon" href="./minecraft-1-5-2.webp" />
+
+    <meta property="og:title" content="Play – Minecraft Unblocked" />
+    <meta property="og:description" content="Launch Minecraft in a fullscreen, responsive frame." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://minecraft-unblocked6x.github.io/minecraft-1-5-2.webp" />
+    <meta property="og:url" content="https://minecraft-unblocked6x.github.io/game.html" />
+    <meta name="theme-color" content="#22c55e" />
+    <meta property="og:site_name" content="Minecraft Unblocked" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Play – Minecraft Unblocked" />
+    <meta name="twitter:description" content="Fullscreen, responsive Minecraft frame with quick version switcher." />
+    <meta name="twitter:image" content="https://minecraft-unblocked6x.github.io/minecraft-1-5-2.webp" />
+
+    <link rel="preconnect" href="https://eaglercraft.com" crossorigin />
+    <link rel="dns-prefetch" href="//eaglercraft.com" />
+    <link rel="preconnect" href="https://classic.minecraft.net" crossorigin />
+    <link rel="dns-prefetch" href="//classic.minecraft.net" />
+    <link rel="preconnect" href="https://crazygg.com" crossorigin />
+    <link rel="dns-prefetch" href="//crazygg.com" />
+    <link rel="preconnect" href="https://unblocked-classroom.github.io" crossorigin />
+    <link rel="dns-prefetch" href="//unblocked-classroom.github.io" />
+    <link rel="preconnect" href="https://unb-games.github.io" crossorigin />
+    <link rel="dns-prefetch" href="//unb-games.github.io" />
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <style>
+      .game-toolbar { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(140%) blur(6px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; padding: .75rem; }
+      .game-toolbar .controls { display: flex; gap: .5rem; align-items: center; margin-left: auto; }
+      .game-frame { position: relative; width: 100%; aspect-ratio: 16/9; background: #0b0b0b; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+      .game-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      .overlay-msg { position: absolute; left: 0; right: 0; bottom: 0; display: none; background: linear-gradient(180deg, transparent, rgba(0,0,0,.6)); color: #fff; padding: .75rem 1rem; font-size: .9rem; }
+      .tips { color: var(--muted); font-size: .9rem; margin-top: .5rem; }
+      .alt-links{ margin-top:.75rem; }
+      .alt-links h3{ margin:.25rem 0 .5rem; font-size:1rem; color:var(--muted); font-weight:600; }
+      .alt-links .links{ display:flex; flex-wrap:wrap; gap:.5rem; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="./" class="brand">
+          <img src="./minecraft-1-5-2.webp" alt="Minecraft Unblocked icon" width="28" height="28" />
+          <span>Play</span>
+        </a>
+        <div class="nav-links">
+          <a href="./">Home</a>
+          <a href="./tos.html">Terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="game-toolbar" role="region" aria-label="Game controls">
+        <label for="version" class="sr-only">Version</label>
+        <select id="version" class="select">
+          <option value="1.8.8">EaglercraftX 1.8.8</option>
+          <option value="1.5.2">Eaglercraft 1.5.2</option>
+          <option value="classic">Minecraft Classic</option>
+        </select>
+
+        <div class="controls">
+          <button id="fullscreenBtn" class="button primary" aria-label="Enter fullscreen">Fullscreen</button>
+          <a id="openNewTab" class="button" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+      </div>
+
+      <section class="game-frame" id="gameContainer">
+        <iframe id="gameFrame" title="Minecraft game frame" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy" referrerpolicy="no-referrer"></iframe>
+        <div class="overlay-msg" id="overlayMsg">If the game does not appear, the host may block embedding. Use "Open in new tab".</div>
+      </section>
+      <section class="alt-links" aria-label="Alternative game links">
+        <h3>Alternative links</h3>
+        <div class="links">
+          <a class="button" href="https://crazygg.com/game/minecraft-beta.html" target="_blank" rel="noopener">CrazyGG Beta</a>
+          <a class="button" href="https://crazygg.com/game/minecraft-1.5.2.html" target="_blank" rel="noopener">CrazyGG 1.5.2</a>
+          <a class="button" href="https://unblocked-classroom.github.io/games/minecraft-152.html" target="_blank" rel="noopener">Unblocked Classroom 1.5.2</a>
+          <a class="button" href="https://unblocked-classroom.github.io/games/minecraft-builder.html" target="_blank" rel="noopener">Unblocked Classroom Builder</a>
+          <a class="button" href="https://unb-games.github.io/games/minecraft-remake-2178.html" target="_blank" rel="noopener">Unb Games Remake</a>
+        </div>
+      </section>
+      <p class="tips">Tip: On mobile, rotate your device for a wider view. Use the fullscreen button for the best experience.</p>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © <span id="year"></span> Minecraft Unblocked. Not affiliated with Mojang or Microsoft.
+        <a href="./tos.html">Terms of Service</a>
+      </p>
+    </footer>
+
+    <script defer src="./assets/script.js"></script>
+    <script>
+      (function initGamePage(){
+        const versionMap = {
+          '1.8.8': 'https://eaglercraft.com/mc/1.8.8/',
+          '1.5.2': 'https://eaglercraft.com/mc/1.5.2/',
+          'classic': 'https://classic.minecraft.net/'
+        };
+
+        const params = new URLSearchParams(location.search);
+        const version = (params.get('version') || '1.8.8').toLowerCase();
+        const select = document.getElementById('version');
+        const frame = document.getElementById('gameFrame');
+        const open = document.getElementById('openNewTab');
+        const container = document.getElementById('gameContainer');
+        const overlay = document.getElementById('overlayMsg');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        if (['1.8.8','1.5.2','classic'].includes(version)) {
+          select.value = version;
+        }
+
+        function setSrc(v){
+          const url = versionMap[v] || versionMap['1.8.8'];
+          frame.src = url;
+          open.href = url;
+          const newUrl = new URL(location.href);
+          newUrl.searchParams.set('version', v);
+          history.replaceState(null, '', newUrl.toString());
+          overlay.style.display = 'none';
+          // Show fallback hint if nothing loads after a short delay
+          window.clearTimeout(frame._hintTimer);
+          frame._hintTimer = window.setTimeout(()=>{ overlay.style.display = 'block'; }, 4000);
+        }
+
+        select.addEventListener('change', ()=> setSrc(select.value));
+        setSrc(select.value);
+
+        fullscreenBtn.addEventListener('click', ()=>{
+          const el = container;
+          const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+          if (document.fullscreenElement || document.webkitFullscreenElement) {
+            (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+          } else if (req) {
+            req.call(el);
+          }
+        });
+      })();
+    </script>
+  </body>
+  </html>
+
+

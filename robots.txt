@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://minecraft-unblocked6x.github.io/sitemap.xml
+
+
