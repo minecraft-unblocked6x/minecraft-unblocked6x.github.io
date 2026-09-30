@@ -29,6 +29,22 @@ body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, 
 .card h2{ margin:.2rem 0 .5rem; font-size:1.25rem; }
 .card p{ margin:.2rem 0 1rem; color:var(--muted); }
 
+.game-section{ margin-top:1rem; }
+.game-heading{ position:sticky; top:49px; z-index:10; display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; padding:.75rem; background:color-mix(in oklab, var(--bg) 80%, transparent); border-bottom:1px solid var(--border); backdrop-filter:saturate(140%) blur(6px); }
+.game-heading h2, .game-heading p{ margin:0; }
+.game-heading > div:first-child{ display:flex; align-items:baseline; gap:.75rem; }
+.game-actions{ display:flex; flex-wrap:wrap; gap:.5rem; margin-left:auto; }
+.game-frame{ position:relative; width:100%; aspect-ratio:16/9; background:#0b0b0b; border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.game-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+#game-player{ display:block; width:100%; height:100%; }
+.player-help{ margin:.5rem 0 0; color:var(--muted); font-size:.9rem; }
+
+@media (max-width: 600px){
+  .game-heading{ top:49px; }
+  .game-heading > div:first-child{ width:100%; }
+  .game-actions{ width:100%; margin-left:0; }
+}
+
 .note{ color:var(--muted); background: #0c0f16; border:1px solid var(--border); border-radius:12px; padding:.75rem 1rem; }
 
 .prose h1, .prose h2, .prose h3{ margin-top:1.25rem; margin-bottom:.5rem; }
@@ -42,5 +58,3 @@ body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, 
 
 /* Small quality-of-life */
 img{ border-radius:8px; }
-
-
